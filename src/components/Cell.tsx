@@ -9,8 +9,6 @@ type CellPropsType={
 
 export const Cell = (props:CellPropsType) => {
     return (
-        <StylledCell  color={TETROMINES["L"].color} /*form={'L'}*/>
-            Cell
-        </StylledCell>
+        <StylledCell  color={TETROMINES[0].color} type={props.type}/>//нужно будет заменить 0 на тип рпиходящей фигуры
     )
 }

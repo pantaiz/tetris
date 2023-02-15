@@ -1,10 +1,12 @@
 import React from "react";
+import {StylledDisplay} from "./style/StylledDislplay";
 type DisplayPropsType={
-    gameover:any,
+    gameover:boolean,
     text:any
 }
+
 export const Display = (props:DisplayPropsType) => {
     return (
-    <div>{props.text}</div>
+    <StylledDisplay gameover={props.gameover}>{props.text}</StylledDisplay>
     )
 }

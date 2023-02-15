@@ -1,6 +1,10 @@
 import styled from "styled-components";
+interface StylledStageProps {
+    width: number;
+    height: number;
+}
 
-export const StylledStage = styled.div`
+export const StylledStage = styled.div<StylledStageProps>`
 display: grid;
   grid-template-rows: repeat(
     ${props=>props.height},
@@ -14,7 +18,3 @@ display: grid;
   background: #111;
   
 `
-type PropsType={
-    height:number
-    width:number
-}

@@ -19,9 +19,9 @@ export const Tetris = () => {
 
                     <aside>
                         <div>
-                            <Display gameover={''} text={"Scores"}/>
-                            <Display gameover={''} text={"Rows"}/>
-                            <Display gameover={''} text={"Level"}/>
+                            <Display gameover={false} text={"Scores"}/>
+                            <Display gameover={true} text={"Rows"}/>
+                            <Display gameover={true} text={"Level"}/>
                         </div>
                         <StartButton callback={''}/>
                     </aside>
