@@ -4,11 +4,11 @@ import {TETROMINES} from "../tetromines";
 import { StylledCell } from "./style/StylledCell";
 
 type CellPropsType={
-    type:string
+    type:0
 }
 
 export const Cell = (props:CellPropsType) => {
     return (
-        <StylledCell  color={TETROMINES[0].color} type={props.type}/>//нужно будет заменить 0 на тип рпиходящей фигуры
+        <StylledCell  color={TETROMINES[props.type].color} type={props.type}/>//нужно будет заменить 0 на тип рпиходящей фигуры
     )
 }

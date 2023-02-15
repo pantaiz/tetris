@@ -7,4 +7,3 @@ export const createStage = () => {return(
       new Array(STAGE_WIDTH).fill([0,'clear']))
   }))
 }
-console.log(createStage())
