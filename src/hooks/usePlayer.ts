@@ -1,5 +1,6 @@
-import {useState} from "react";
+import {useCallback, useState} from "react";
 import {LetterType, randomTetromino} from "../tetromines";
+import {STAGE_WIDTH} from "../gameHelper";
 
 type IntialStateType={
     pos:{
@@ -9,7 +10,8 @@ type IntialStateType={
     tetromino: Array<Array<0 | String>>,
     colided:boolean
 }
-//shape:
+
+
 export const usePlayer = () => {
   const [player,setPlayer]=useState(<IntialStateType>{
       pos:{x:0,
@@ -17,6 +19,28 @@ export const usePlayer = () => {
       tetromino:randomTetromino().shape,
       colided:false
   });
-  return player
+
+  type upDatePlayerPos={
+      x:number,
+      y:number,
+      collided:boolean
+  }
+  const upDatePlayerPos = ({x,y,collided}:upDatePlayerPos) => {
+      setPlayer(prev=>({
+          ...prev,
+          pos:{x:(prev.pos.x+=x),y:(prev.pos.y+y)},
+          collided}))
+
+  }
+
+  const resetPlayer = useCallback(()=>{
+      setPlayer({
+
+          pos:{x:STAGE_WIDTH/2-2,y:0},
+          tetromino:randomTetromino().shape,
+          colided:false
+      })
+  },[])
+  }
+  return [player,upDatePlayerPos,resetPlayer]
 }
-////проверить в функции или возвращается объект
