@@ -29,7 +29,7 @@ const App: React.FC = () => {
     const keyUp = ({keyCode}: { keyCode: number }): void => {
         if (!gameOver) {
             if (keyCode === 40) {
-                setDropTime(1000 / level + 200);
+                setDropTime(600 / level + 200);
             }
         }
 
@@ -37,7 +37,7 @@ const App: React.FC = () => {
     const handleStartGame = (): void => {
         if (gameArea.current) gameArea.current.focus();
         setStage(createStage())
-        setDropTime(1000)
+        setDropTime(600)
         resetPlayer()
         setScore(0)
         setLevel(1)
@@ -65,7 +65,7 @@ const App: React.FC = () => {
 
         if (rows > level * 10) {
             setLevel(prev => prev + 1);
-            setDropTime(1000 / level + 200)
+            setDropTime(600 / level + 200)
         }
 
         if (!isColliding(player, stage, {x: 0, y: 1})) {
