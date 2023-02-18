@@ -1,16 +1,17 @@
 {
   "files": {
-    "main.css": "/tetris/static/css/main.e6c13ad2.css",
-    "main.js": "/tetris/static/js/main.8b06e4ad.js",
+    "main.css": "/tetris/static/css/main.0017a465.css",
+    "main.js": "/tetris/static/js/main.003f4efb.js",
     "static/js/787.0ef42b96.chunk.js": "/tetris/static/js/787.0ef42b96.chunk.js",
     "static/media/bg.jpg": "/tetris/static/media/bg.deaa0d55d722f734fe92.jpg",
+    "static/media/Pixel-LCD-7.woff": "/tetris/static/media/Pixel-LCD-7.63d9c15192fdeab6d3a6.woff",
     "index.html": "/tetris/index.html",
-    "main.e6c13ad2.css.map": "/tetris/static/css/main.e6c13ad2.css.map",
-    "main.8b06e4ad.js.map": "/tetris/static/js/main.8b06e4ad.js.map",
+    "main.0017a465.css.map": "/tetris/static/css/main.0017a465.css.map",
+    "main.003f4efb.js.map": "/tetris/static/js/main.003f4efb.js.map",
     "787.0ef42b96.chunk.js.map": "/tetris/static/js/787.0ef42b96.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6c13ad2.css",
-    "static/js/main.8b06e4ad.js"
+    "static/css/main.0017a465.css",
+    "static/js/main.003f4efb.js"
   ]
 }
